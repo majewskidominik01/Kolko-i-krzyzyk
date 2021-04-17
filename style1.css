@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.wszystko {
+    margin-top: 2%;
+    height: 510px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+
+  
+
+header {
+    grid-area: header;
+    text-align: center;
+    height: 100px;
+}
+
+header > span {
+    letter-spacing: 10px;
+    position: relative;
+    top: 40%;
+    font-size: 30px;
+    color: white;
+
+}
+
+aside {
+    grid-area: content;
+    height: 300px;
+}
+
+aside > .table {
+    height: 100%;
+    color: white;
+    font-size: 80px;
+    text-align: center;
+}
+
+.button { 
+    grid-area: footer;
+    height: 100px;
+}
+
+.rect {
+    width: 80px;
+    height: 100px;
+    float: left;
+    border: 1px solid white;
+ }
+
+.rectlg {
+    width: 80px;
+    height: 100px;
+    float: left;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.rectsg {
+    width: 80px;
+    height: 100px;
+    float: left;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    
+}
+
+.rectpg {
+    width: 80px;
+    height: 100px;
+    float: left;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+
+}
+
+.rectls {
+    width: 80px;
+    height: 100px;
+    float: left;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.rectps {
+    width: 80px;
+    height: 100px;
+    float: left;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+}
+
+.rectld {
+    width: 80px;
+    height: 100px;
+    float: left;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+
+    
+}
+
+.rectsd {
+    width: 80px;
+    height: 100px;
+    float: left;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+}
+
+.rectpd {
+    width: 80px;
+    height: 100px;
+    float: left;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+}
+
+.button {
+    height: 100px;
+    text-align: center;
+}
+
+.button > button {
+    position: relative;
+    top: 30%;
+    border-radius: 25%;
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    
+}

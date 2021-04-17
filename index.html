@@ -3,7 +3,7 @@
 <head>
     <title>Kółko i krzyżyk</title>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style1.css"/>
 </head>
 <body>
     <div class="wszystko">
@@ -12,20 +12,21 @@
         </header>
         <aside>
             <div class="table">
-                <div class="rectlg"></div>
-                <div class="rectsg"></div>
-                <div class="rectpg"></div>
-                <div class="rectls"></div>
-                <div class="rect"></div>
-                <div class="rectps"></div>
-                <div class="rectld"></div>
-                <div class="rectsd"></div>
-                <div class="rectpd"></div>
-            </div>
-            <div class="button">
-                <button>Zagraj</button>
+                <div class="rectlg" id="1" onClick="count1()"></div>
+                <div class="rectsg" id="2" onClick="count2()"></div>
+                <div class="rectpg" id="3" onClick="count3()"></div>
+                <div class="rectls" id="4"></div>
+                <div class="rect"   id="5"></div>
+                <div class="rectps" id="6"></div>
+                <div class="rectld" id="7"></div>
+                <div class="rectsd" id="8"></div>
+                <div class="rectpd" id="9"></div>
             </div>        
         </aside>
+        <div class="button">
+            <button>Zagraj</button>
+        </div>
     </div>
+    <script src="js.js"></script>
 </body>
 </html>

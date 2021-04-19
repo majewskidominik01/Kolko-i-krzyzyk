@@ -25,19 +25,26 @@ function xoro() {
 }
 
 function xwin() {
+    
+   for (i=0; i<=2; i++) {
     if (liczbapol[0].innerHTML == "X" && liczbapol[1].innerHTML == "X" && liczbapol[2].innerHTML == "X" || liczbapol[3].innerHTML == "X" && liczbapol[4].innerHTML == "X" && liczbapol[5].innerHTML == "X" || liczbapol[6].innerHTML == "X" && liczbapol[7].innerHTML == "X" && liczbapol[8].innerHTML == "X" || liczbapol[0].innerHTML == "X" && liczbapol[4].innerHTML == "X" && liczbapol[8].innerHTML == "X" || liczbapol[2].innerHTML == "X" && liczbapol[4].innerHTML == "X" && liczbapol[6].innerHTML == "X" ) {
         console.log("WYGRAŁ X");
     } else {
         event.target.innerHTML = "X";
-        liczbajeden++;
+        liczbajeden++; 
     }
 }
 
+}
+
 function owin() {
+   
+    for (i=0; i<=2; i++) {
     if (liczbapol[0].innerHTML == "O" && liczbapol[1].innerHTML == "O" && liczbapol[2].innerHTML == "O" || liczbapol[3].innerHTML == "O" && liczbapol[4].innerHTML == "O" && liczbapol[5].innerHTML == "O" || liczbapol[6].innerHTML == "O" && liczbapol[7].innerHTML == "O" && liczbapol[8].innerHTML == "O" || liczbapol[0].innerHTML == "O" && liczbapol[4].innerHTML == "O" && liczbapol[8].innerHTML == "O" || liczbapol[2].innerHTML == "O" && liczbapol[4].innerHTML == "O" && liczbapol[6].innerHTML == "O" ) {
         console.log("WYGRAŁ O");
     } else {
         event.target.innerHTML = "O";
         liczbajeden++;
     }
+}
 }

@@ -1,252 +1,45 @@
-var xoro = 1;
-var rectlg = document.getElementById("1").innerHTML;
-var rectsg = document.getElementById("2").innerHTML;
-var rectpg = document.getElementById("3").innerHTML;
-var rectls = document.getElementById("4").innerHTML;
-var rects = document.getElementById("5").innerHTML;
-var rectps = document.getElementById("6").innerHTML;
-var rectld = document.getElementById("7").innerHTML;
-var rectsd = document.getElementById("8").innerHTML;
-var rectpd = document.getElementById("9").innerHTML;
+var rectlg = document.getElementById("1");
+var rectsg = document.getElementById("2");
+var rectpg = document.getElementById("3");
+var rectls = document.getElementById("4");
+var rects = document.getElementById("5");
+var rectps = document.getElementById("6");
+var rectld = document.getElementById("7");
+var rectsd = document.getElementById("8");
+var rectpd = document.getElementById("9");
+var liczbajeden = 0;
+var liczbapol = [rectlg,rectsg,rectpg,rectls,rects,rectps,rectld,rectsd,rectpd]; 
 
-function count1() {
- 
-    if(rectlg == "X" && rectsg == "X" && rectpg == "X" || rectls == "X" && rects == "X" && rectps == "X" || rectld == "X" && rectsd == "X" && rectpd == "X" || rectlg == "X" && rects == "X" && rectpd == "X" || rectpg == "X" && rects == "X" && rectld == "X")
-    {
-        console.log("WYGRAŁ X");
-    
-    } else if(rectlg == "O" && rectsg == "O" && rectpg == "O" || rectls == "O" && rects == "O" && rectps == "O" || rectld == "O" && rectsd == "O" && rectpd == "O" || rectlg == "O" && rects == "O" && rectpd == "O" || rectpg == "O" && rects == "O" && rectld == "O")
-    {
-        console.log("WYGRAŁO O");   
-    } else {
-        var rectlgi = document.getElementById("1").innerHTML;
-        if(rectlgi == "X" || rectlgi == "O" )
-        {
-        }
-        else {
-            xoro++;
-        if (xoro%2) {
-            document.getElementById("1").innerHTML = "X";
-        }
-            else {
-                document.getElementById("1").innerHTML = "O";
-        } 
-    }
-    }
-
+for (i=0; i<=8; i++) {
+    liczbapol[i].addEventListener("click", xoro);
 }
 
-function count2() {
- 
-    if(rectlg == "X" && rectsg == "X" && rectpg == "X" || rectls == "X" && rects == "X" && rectps == "X" || rectld == "X" && rectsd == "X" && rectpd == "X" || rectlg == "X" && rects == "X" && rectpd == "X" || rectpg == "X" && rects == "X" && rectld == "X")
-    {
-        console.log("WYGRAŁ X");
-    
-    } else if(rectlg == "O" && rectsg == "O" && rectpg == "O" || rectls == "O" && rects == "O" && rectps == "O" || rectld == "O" && rectsd == "O" && rectpd == "O" || rectlg == "O" && rects == "O" && rectpd == "O" || rectpg == "O" && rects == "O" && rectld == "O")
-    {
-        console.log("WYGRAŁO O");   
+
+function xoro() {
+    if(event.target.innerHTML == "X" || event.target.innerHTML == "O") {
+    } else if(liczbajeden%2) {
+        xwin();
     } else {
-        var rectlgi = document.getElementById("2").innerHTML;
-        if(rectlgi == "X" || rectlgi == "O" )
-        {
-        }
-        else {
-            xoro++;
-        if (xoro%2) {
-            document.getElementById("2").innerHTML = "X";
-        }
-            else {
-                document.getElementById("2").innerHTML = "O";
-        } 
-    }
+        owin();
     }
 }
 
-function count3() {
- 
-    if(rectlg == "X" && rectsg == "X" && rectpg == "X" || rectls == "X" && rects == "X" && rectps == "X" || rectld == "X" && rectsd == "X" && rectpd == "X" || rectlg == "X" && rects == "X" && rectpd == "X" || rectpg == "X" && rects == "X" && rectld == "X")
-    {
-        console.log("WYGRAŁ X");
-    
-    } else if(rectlg == "O" && rectsg == "O" && rectpg == "O" || rectls == "O" && rects == "O" && rectps == "O" || rectld == "O" && rectsd == "O" && rectpd == "O" || rectlg == "O" && rects == "O" && rectpd == "O" || rectpg == "O" && rects == "O" && rectld == "O")
-    {
-        console.log("WYGRAŁO O");   
+function xwin() {
+    event.target.innerHTML = "X";
+    if (liczbapol[0].innerHTML == "X" && liczbapol[1].innerHTML == "X" && liczbapol[2].innerHTML == "X" || liczbapol[3].innerHTML == "X" && liczbapol[4].innerHTML == "X" && liczbapol[5].innerHTML == "X" || liczbapol[6].innerHTML == "X" && liczbapol[7].innerHTML == "X" && liczbapol[8].innerHTML == "X" || liczbapol[0].innerHTML == "X" && liczbapol[4].innerHTML == "X" && liczbapol[8].innerHTML == "X" || liczbapol[2].innerHTML == "X" && liczbapol[4].innerHTML == "X" && liczbapol[6].innerHTML == "X" || liczbapol[0].innerHTML == "X" && liczbapol[3].innerHTML == "X" && liczbapol[6].innerHTML == "X" || liczbapol[1].innerHTML == "X" && liczbapol[4].innerHTML == "X" && liczbapol[7].innerHTML == "X" || liczbapol[2].innerHTML == "X" && liczbapol[5].innerHTML == "X" && liczbapol[8].innerHTML == "X" ) {
+        document.getElementById("table").innerHTML = "WYGRAŁ X";
     } else {
-        var rectlgi = document.getElementById("3").innerHTML;
-        if(rectlgi == "X" || rectlgi == "O" )
-        {
-        }
-        else {
-            xoro++;
-        if (xoro%2) {
-            document.getElementById("3").innerHTML = "X";
-        }
-            else {
-                document.getElementById("3").innerHTML = "O";
-        } 
+        liczbajeden++; 
     }
-    }
-
 }
 
-function count4() {
- 
-    if(rectlg == "X" && rectsg == "X" && rectpg == "X" || rectls == "X" && rects == "X" && rectps == "X" || rectld == "X" && rectsd == "X" && rectpd == "X" || rectlg == "X" && rects == "X" && rectpd == "X" || rectpg == "X" && rects == "X" && rectld == "X")
-    {
-        console.log("WYGRAŁ X");
-    
-    } else if(rectlg == "O" && rectsg == "O" && rectpg == "O" || rectls == "O" && rects == "O" && rectps == "O" || rectld == "O" && rectsd == "O" && rectpd == "O" || rectlg == "O" && rects == "O" && rectpd == "O" || rectpg == "O" && rects == "O" && rectld == "O")
-    {
-        console.log("WYGRAŁO O");   
+function owin() {
+    event.target.innerHTML = "O";
+
+    if (liczbapol[0].innerHTML == "O" && liczbapol[1].innerHTML == "O" && liczbapol[2].innerHTML == "O" || liczbapol[3].innerHTML == "O" && liczbapol[4].innerHTML == "O" && liczbapol[5].innerHTML == "O" || liczbapol[6].innerHTML == "O" && liczbapol[7].innerHTML == "O" && liczbapol[8].innerHTML == "O" || liczbapol[0].innerHTML == "O" && liczbapol[4].innerHTML == "O" && liczbapol[8].innerHTML == "O" || liczbapol[2].innerHTML == "O" && liczbapol[4].innerHTML == "O" && liczbapol[6].innerHTML == "O"  || liczbapol[0].innerHTML == "O" && liczbapol[3].innerHTML == "O" && liczbapol[6].innerHTML == "O" || liczbapol[1].innerHTML == "O" && liczbapol[4].innerHTML == "O" && liczbapol[7].innerHTML == "O" || liczbapol[2].innerHTML == "O" && liczbapol[5].innerHTML == "O" && liczbapol[8].innerHTML == "O" ) {
+        document.getElementById("table").innerHTML = "WYGRAŁO O";
+
     } else {
-        var rectlgi = document.getElementById("4").innerHTML;
-        if(rectlgi == "X" || rectlgi == "O" )
-        {
-        }
-        else {
-            xoro++;
-        if (xoro%2) {
-            document.getElementById("4").innerHTML = "X";
-        }
-            else {
-                document.getElementById("4").innerHTML = "O";
-        } 
+        liczbajeden++;
     }
-    }
-
-}
-
-function count5() {
- 
-    if(rectlg == "X" && rectsg == "X" && rectpg == "X" || rectls == "X" && rects == "X" && rectps == "X" || rectld == "X" && rectsd == "X" && rectpd == "X" || rectlg == "X" && rects == "X" && rectpd == "X" || rectpg == "X" && rects == "X" && rectld == "X")
-    {
-        console.log("WYGRAŁ X");
-    
-    } else if(rectlg == "O" && rectsg == "O" && rectpg == "O" || rectls == "O" && rects == "O" && rectps == "O" || rectld == "O" && rectsd == "O" && rectpd == "O" || rectlg == "O" && rects == "O" && rectpd == "O" || rectpg == "O" && rects == "O" && rectld == "O")
-    {
-        console.log("WYGRAŁO O");   
-    } else {
-        var rectlgi = document.getElementById("5").innerHTML;
-        if(rectlgi == "X" || rectlgi == "O" )
-        {
-        }
-        else {
-            xoro++;
-        if (xoro%2) {
-            document.getElementById("5").innerHTML = "X";
-        }
-            else {
-                document.getElementById("5").innerHTML = "O";
-        } 
-    }
-    }
-
-}
-
-function count6() {
- 
-    if(rectlg == "X" && rectsg == "X" && rectpg == "X" || rectls == "X" && rects == "X" && rectps == "X" || rectld == "X" && rectsd == "X" && rectpd == "X" || rectlg == "X" && rects == "X" && rectpd == "X" || rectpg == "X" && rects == "X" && rectld == "X")
-    {
-        console.log("WYGRAŁ X");
-    
-    } else if(rectlg == "O" && rectsg == "O" && rectpg == "O" || rectls == "O" && rects == "O" && rectps == "O" || rectld == "O" && rectsd == "O" && rectpd == "O" || rectlg == "O" && rects == "O" && rectpd == "O" || rectpg == "O" && rects == "O" && rectld == "O")
-    {
-        console.log("WYGRAŁO O");   
-    } else {
-        var rectlgi = document.getElementById("6").innerHTML;
-        if(rectlgi == "X" || rectlgi == "O" )
-        {
-        }
-        else {
-            xoro++;
-        if (xoro%2) {
-            document.getElementById("6").innerHTML = "X";
-        }
-            else {
-                document.getElementById("6").innerHTML = "O";
-        } 
-    }
-    }
-
-}
-
-function count7() {
- 
-    if(rectlg == "X" && rectsg == "X" && rectpg == "X" || rectls == "X" && rects == "X" && rectps == "X" || rectld == "X" && rectsd == "X" && rectpd == "X" || rectlg == "X" && rects == "X" && rectpd == "X" || rectpg == "X" && rects == "X" && rectld == "X")
-    {
-        console.log("WYGRAŁ X");
-    
-    } else if(rectlg == "O" && rectsg == "O" && rectpg == "O" || rectls == "O" && rects == "O" && rectps == "O" || rectld == "O" && rectsd == "O" && rectpd == "O" || rectlg == "O" && rects == "O" && rectpd == "O" || rectpg == "O" && rects == "O" && rectld == "O")
-    {
-        console.log("WYGRAŁO O");   
-    } else {
-        var rectlgi = document.getElementById("7").innerHTML;
-        if(rectlgi == "X" || rectlgi == "O" )
-        {
-        }
-        else {
-            xoro++;
-        if (xoro%2) {
-            document.getElementById("7").innerHTML = "X";
-        }
-            else {
-                document.getElementById("7").innerHTML = "O";
-        } 
-    }
-    }
-
-}
-
-function count8() {
- 
-    if(rectlg == "X" && rectsg == "X" && rectpg == "X" || rectls == "X" && rects == "X" && rectps == "X" || rectld == "X" && rectsd == "X" && rectpd == "X" || rectlg == "X" && rects == "X" && rectpd == "X" || rectpg == "X" && rects == "X" && rectld == "X")
-    {
-        console.log("WYGRAŁ X");
-    
-    } else if(rectlg == "O" && rectsg == "O" && rectpg == "O" || rectls == "O" && rects == "O" && rectps == "O" || rectld == "O" && rectsd == "O" && rectpd == "O" || rectlg == "O" && rects == "O" && rectpd == "O" || rectpg == "O" && rects == "O" && rectld == "O")
-    {
-        console.log("WYGRAŁO O");   
-    } else {
-        var rectlgi = document.getElementById("8").innerHTML;
-        if(rectlgi == "X" || rectlgi == "O" )
-        {
-        }
-        else {
-            xoro++;
-        if (xoro%2) {
-            document.getElementById("8").innerHTML = "X";
-        }
-            else {
-                document.getElementById("8").innerHTML = "O";
-        } 
-    }
-    }
-
-}
-
-function count9() {
- 
-    if(rectlg == "X" && rectsg == "X" && rectpg == "X" || rectls == "X" && rects == "X" && rectps == "X" || rectld == "X" && rectsd == "X" && rectpd == "X" || rectlg == "X" && rects == "X" && rectpd == "X" || rectpg == "X" && rects == "X" && rectld == "X")
-    {
-        console.log("WYGRAŁ X");
-    
-    } else if(rectlg == "O" && rectsg == "O" && rectpg == "O" || rectls == "O" && rects == "O" && rectps == "O" || rectld == "O" && rectsd == "O" && rectpd == "O" || rectlg == "O" && rects == "O" && rectpd == "O" || rectpg == "O" && rects == "O" && rectld == "O")
-    {
-        console.log("WYGRAŁO O");   
-    } else {
-        var rectlgi = document.getElementById("9").innerHTML;
-        if(rectlgi == "X" || rectlgi == "O" )
-        {
-        }
-        else {
-            xoro++;
-        if (xoro%2) {
-            document.getElementById("9").innerHTML = "X";
-        }
-            else {
-                document.getElementById("9").innerHTML = "O";
-        } 
-    }
-    }
-
 }

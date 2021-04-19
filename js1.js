@@ -27,5 +27,4 @@ function xoro() {
         console.log(liczbajeden);
         liczbajeden++;
     }
-  s
 }

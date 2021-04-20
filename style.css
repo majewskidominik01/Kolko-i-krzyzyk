@@ -145,3 +145,16 @@ aside > .table {
     font-size: 30px;
     
 }
+
+.xwinoro {
+    height: 50px;
+    width: 250px;
+    background-color: white;
+    position: absolute;
+    font-size: 40px;
+    top: 29%;
+    border-radius: 20%;
+    color: black;
+    display: none;
+    text-align: center;
+}
